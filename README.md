@@ -49,3 +49,19 @@
 ### 7. Email Notifications
 - Email alert when a new client submits a form
 - Optional: include the AI summary in the email
+
+## Setup
+
+Install dependencies (requires Node.js and npm):
+
+```bash
+npm install
+```
+
+Create an `.env` file based on `.env.example` and add your Supabase and Stripe keys.
+
+Run the development server:
+
+```bash
+npm run dev
+```
