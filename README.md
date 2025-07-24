@@ -1,46 +1,51 @@
- 3.1 User Signup & Auth
-	•	Email/password login (Auth0, Supabase Auth, or Firebase Auth)
-	•	Optional: Google OAuth
-	•	Basic onboarding screen after signup
+## ✅ Core Features (MVP)
 
-✅ 3.2 Intake Form Builder
-	•	User creates a new form with:
-	•	Title
-	•	Description
-	•	Set of questions (text, long text, multiple choice)
-	•	Allow rearranging questions
-	•	Optional fields: required toggle, section dividers
+### 1. User Signup & Authentication
+- Email/password signup and login
+- Optional Google OAuth
+- Basic onboarding screen after signup
 
-Tech: React + shadcn/ui or Tailwind UI for components
-Data storage: Supabase / Firebase
+### 2. Intake Form Builder
+- Create a new form with:
+  - Title
+  - Description
+  - Custom questions (text, long text, multiple choice)
+- Features:
+  - Rearranging questions
+  - Required field toggle
+  - Section dividers
 
-✅ 3.3 Public Form Link
-	•	Each form generates a public, client-facing link (e.g., yourapp.com/form/abc123)
-	•	Mobile-friendly UI
-	•	Branded with user’s name/logo if provided
+> **Tech Stack:** React + shadcn/ui or Tailwind UI  
+> **Data Storage:** Supabase or Firebase
 
-✅ 3.4 Response Submission
-	•	Client fills out the form
-	•	Data is securely stored
-	•	Show a friendly confirmation screen
+### 3. Public Form Link
+- Each form generates a unique public link (e.g., `yourapp.com/form/abc123`)
+- Mobile-friendly UI
+- Branded with user’s name/logo (if provided)
 
-✅ 3.5 AI-Powered Summary Generator
-	•	Use OpenAI GPT-4 (or 3.5-turbo for cost) to:
-	•	Summarize key takeaways from intake responses
-	•	Identify red flags or special needs
-	•	Provide a suggested action plan (optional)
+### 4. Response Submission
+- Clients submit responses through the public form
+- Data is securely stored
+- Friendly confirmation screen shown to client
 
-Tech: Serverless function (e.g., Vercel Edge Functions) calls OpenAI
-Prompting: Customize by profession (“Act like a licensed therapist…”)
-Token management: Cap usage to 1–2 summaries per form to control cost
+### 5. AI-Powered Summary Generator
+- Uses OpenAI (e.g., GPT-4 or GPT-3.5-turbo) to:
+  - Summarize key intake points
+  - Flag important notes or red flags
+  - Optionally suggest next steps
+- Prompt customization based on profession
 
-✅ 3.6 User Dashboard
-	•	Show list of forms and submitted responses
-	•	Each response has:
-	•	Raw input
-	•	AI summary
-	•	Export (PDF or copy to clipboard)
+> **Implementation:**  
+> - Serverless function (e.g., Vercel Edge Functions)  
+> - Token usage limits to manage cost
 
-✅ 3.7 Email Notifications
-	•	Notify user when a new response is submitted
-	•	Optional: Send user AI summary in email
+### 6. User Dashboard
+- View list of forms and all submitted responses
+- For each response:
+  - Raw intake data
+  - AI-generated summary
+  - Export option (PDF or copy to clipboard)
+
+### 7. Email Notifications
+- Email alert when a new client submits a form
+- Optional: include the AI summary in the email
